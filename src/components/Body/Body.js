@@ -6,9 +6,8 @@ import Editor from "../Editor/Editor";
 import Resume from "../Resume/Resume";
 import Resumes from "../Resume/Resumes";
 import { Button } from "@mui/material";
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-// import Template from "../Template/Template";
+
+
 
 
 const Body = () => {
@@ -66,19 +65,9 @@ const Body = () => {
     },
   });
 console.log("resumeInformation",resumeInformation.Summary.detail)
-const [alignment, setAlignment] = React.useState(0);
-console.log(alignment,'alignment')
 
-const handleChange = (
-  event,
-  newAlignment,
-) => {
-
- 
- 
-
-};
-
+const [showResults, setShowResults] = React.useState(false)
+const onClick = () => setShowResults(true)
   
    
   return (
@@ -97,6 +86,7 @@ const handleChange = (
             />
           ))}
         </div>
+        <Button onClick={onClick}>Tab One </Button>
         <ReactToPrint
          onBeforePrint={()=>resumeInformation.Summary.detail? "" :alert("please enter")}
           trigger={() => {
@@ -110,17 +100,7 @@ const handleChange = (
         />
       </div>
       <div className={styles.main}>
-      <ToggleButtonGroup
-      color="primary"
-      value={alignment}
-      exclusive
-      onChange={handleChange}
-      aria-label="Platform"
-    >
-      <ToggleButton value="a">t1</ToggleButton>
-      <ToggleButton value="b">t2</ToggleButton>
-    
-    </ToggleButtonGroup>
+      
     
          <Editor
           sections={sections}
@@ -135,7 +115,7 @@ const handleChange = (
         />
       
 
-   <Editor
+   {/* <Editor
           sections={sections}
           information={resumeInformation}
           setInformation={setResumeInformation}
@@ -145,7 +125,7 @@ const handleChange = (
           sections={sections}
           information={resumeInformation}
           activeColor={activeColor}
-        />
+        /> */}
 
         
        

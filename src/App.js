@@ -1,15 +1,18 @@
 import React from 'react';
-import "./App.css";
-import Header from './components/Header';
-import Body from './components/Body/Body';
+import "./App.css";     
+import SignIn from './Login-Auth/SignIn';
+import {useAuthState} from "react-firebase-hooks/auth"
+import { auth } from './Login-Auth/firebase'
+import Home from './components/Home';
+
 
 const App = () => {
+  const [user] = useAuthState(auth)
   return (
     <>
-    
-    <Header/>
-    <Body/>
-   
+    {
+      user ? <Home user={user} /> : <SignIn />
+    }
     </>
   )
 }

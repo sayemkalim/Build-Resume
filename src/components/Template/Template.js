@@ -9,10 +9,10 @@ import {
   Phone,
 } from "react-feather";
 
-import styles from "./Resume.module.css";
+import styles from "./Template.module.css";
 
 
-const Resume = forwardRef((props, ref) => {
+const Template = forwardRef((props, ref) => {
   const information = props.information;
   const sections = props.sections;
   const containerRef = useRef();
@@ -358,4 +358,4 @@ const Resume = forwardRef((props, ref) => {
   );
 });
 
-export default Resume;
+export default Template;

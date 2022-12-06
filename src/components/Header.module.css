@@ -10,23 +10,16 @@
   min-height: 85vh;
   }
   .header {
-    background: linear-gradient(45deg, #c55a78 30%, #f3b08c 90%);
+    background: linear-gradient(to right,#FF7082, #C0E9FF );
     border: 0;
     color: white;
     padding: 0 30px;
   }
-  .headimg {
-    margin: 0 auto;
-    max-width: 400px;
-    color: rgb(10, 8, 9);
-    font-size: 3.1rem;
-    line-height: 4.1rem;
-    font-family: 'lovelyFont';
-    text-shadow: 4px 4px #555151;
-  }
+  /* 0 */
   .headp {
     margin: 0 auto;
-    max-width: 400px;
+    margin-left: 650px;
+    max-width: 500px;
     color: rgb(10, 8, 9);
     font-size: 3.1rem;
     line-height: 4.1rem;
@@ -54,4 +47,9 @@
   .right img {
     width: 500px;
   }
+  .slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
   
+ 

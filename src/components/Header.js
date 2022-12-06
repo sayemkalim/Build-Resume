@@ -1,17 +1,19 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import styles from "./Header.module.css";
+import { Button,Toolbar, Box, AppBar } from '@mui/material'
 import resumeSvg from "../image/resume.svg";
-const Header = () => {
+import styles from "./Header.module.css";
+import { auth } from '../Login-Auth/firebase'
+
+
+const Header = ({user}) => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar className={styles.header} position="static">
-       {/* {<img className={styles.headimg} src='header-logo.png' />} */}
           <Toolbar>
             <p className={styles.headp}>B A R</p>
+              <Button  style={{ padding: '20px', fontSize: '17px', borderRadius: '10px', fontWeight: '550', height: "30px",display: 'flex',   }}  color="inherit" onClick={()=> auth.signOut()}>Log Out</Button>
+              <img src={user.photoURL} alt="dp" style={{"width": "40px", "borderRadius": "50%"}} referrerpolicy="no-referrer"/>
           </Toolbar>
         </AppBar>
       </Box>
@@ -26,7 +28,7 @@ const Header = () => {
           </p>
         </div>
         <div className={styles.right}>
-          <img src={resumeSvg} alt="Resume" />
+          <img src={resumeSvg} alt="Resume"/>
         </div>
       </div>
     </>

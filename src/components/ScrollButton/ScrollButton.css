@@ -1,0 +1,10 @@
+.butt {
+   position: fixed; 
+   bottom: 160px;
+   height: 35px;
+   z-index: 1;
+   cursor: pointer;
+   color: rgb(49, 25, 25);
+   margin-left: 750px;
+  
+}

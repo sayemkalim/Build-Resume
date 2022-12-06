@@ -8,11 +8,15 @@
   }
   
   .heading {
-    font-weight: 500;
-    font-size: 2.1rem;
+    margin-left: 100px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 3.1rem;
     color:#d42828;
-    font-family: cursive;
+    font-family: lovely font;
     text-shadow: 4px 4px #f1bbbb;
+
   }
   
   .toolbar {

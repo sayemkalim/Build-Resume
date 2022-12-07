@@ -6,6 +6,8 @@ import Editor from "../Editor/Editor";
 import Resume from "../Resume/Resume";
 import Resumes from "../Resume/Resumes";
 import { Button } from "@mui/material";
+import ImageButton from 'react-image-button';
+import image  from './t1.png'
 
 
 
@@ -66,8 +68,17 @@ const Body = () => {
   });
 console.log("resumeInformation",resumeInformation.Summary.detail)
 
-const [showResults, setShowResults] = React.useState(false)
-const onClick = () => setShowResults(true)
+const [showResults, setShowResults] = React.useState(0)
+console.log('showResults',showResults);
+
+const onClick = () => {
+
+  if(showResults===0)
+  setShowResults(1)
+  else{
+    setShowResults(0)
+  }
+}
   
    
   return (
@@ -86,7 +97,7 @@ const onClick = () => setShowResults(true)
             />
           ))}
         </div>
-        <Button onClick={onClick}>Tab One </Button>
+         
         <ReactToPrint
          onBeforePrint={()=>resumeInformation.Summary.detail? "" :alert("please enter")}
           trigger={() => {
@@ -100,19 +111,20 @@ const onClick = () => setShowResults(true)
         />
       </div>
       <div className={styles.main}>
-      
+      {/* <button><img src={image} /></button> */}
+      <Button onClick={onClick}><img src={image} /> </Button>
     
-         <Editor
+        {showResults ===1 ?  <Editor
           sections={sections}
           information={resumeInformation}
           setInformation={setResumeInformation}
-        />
-       <Resume
+        /> : null}
+      { showResults ===1 ? <Resume
           ref={resumeRef}
           sections={sections}
           information={resumeInformation}
           activeColor={activeColor}
-        />
+        /> : null}
       
 
    {/* <Editor

@@ -81,7 +81,7 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.location ? (
                 <p className={styles.date}>
-                  <MapPin /> Remote
+                  <MapPin />{item.location}
                 </p>
               ) : (
                 <span />
@@ -173,6 +173,7 @@ const Resume = forwardRef((props, ref) => {
         </div>
         <div className={styles.content}>
           {info.education?.details?.map((item) => (
+          
             <div className={styles.item}>
               {item.title ? (
                 <p className={styles.title}>{item.title}</p>
@@ -180,7 +181,7 @@ const Resume = forwardRef((props, ref) => {
                 <span />
               )}
               {item.college ? (
-                <p className={styles.subTitle}>Some college name</p>
+                <p className={styles.subTitle}>{item.college}</p>
               ) : (
                 <span />
               )}
@@ -310,7 +311,11 @@ const Resume = forwardRef((props, ref) => {
       <div ref={containerRef} className={styles.container}>
         <div className={styles.header}>
           <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
-          <p className={styles.subheading}>{info.basicInfo?.detail?.address}</p>
+          <div style={{marginTop:20}}>
+          <MapPin />
+          </div>
+       <div style={{marginTop:-28,marginLeft:30}}> <p className={styles.subheading}>{info.basicInfo?.detail?.address}</p></div>
+         
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>
 
           <div className={styles.links}>

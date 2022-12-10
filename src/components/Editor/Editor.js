@@ -28,7 +28,7 @@ const Editor = (props) => {
     phone: activeInformation?.detail?.phone || "",
     email: activeInformation?.detail?.email || "",
   });
-  
+  console.log('values',values);
   const handlePointUpdate = (value, index) => {
     const tempValues = { ...values };
     if (!Array.isArray(tempValues.points)) tempValues.points = [];
@@ -358,7 +358,7 @@ const Editor = (props) => {
     }
   };
   const handleSubmission = () => {
-    console.log(values)
+
     switch (sections[activeSectionKey]) {
       case sections.basicInfo: {
         const tempDetail = {
@@ -655,6 +655,15 @@ const Editor = (props) => {
         {generateBody()}
 
         <button onClick={handleSubmission}>Save</button>
+        <button onClick={()=>setValues({
+    name: activeInformation?.detail?.name || "",
+    address: activeInformation?.detail?.address || "",
+    title: activeInformation?.detail?.title || "",
+    linkedin: activeInformation?.detail?.linkedin || "",
+    github: activeInformation?.detail?.github || "",
+    phone: activeInformation?.detail?.phone || "",
+    email: activeInformation?.detail?.email || "",
+  })}>Clear</button>
       </div>
     </div>
   );

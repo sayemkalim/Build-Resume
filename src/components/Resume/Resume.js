@@ -314,7 +314,7 @@ const Resume = forwardRef((props, ref) => {
           <div style={{marginTop:20}}>
           <MapPin />
           </div>
-       <div style={{marginTop:-28,marginLeft:30}}> <p className={styles.subheading}>{info.basicInfo?.detail?.address}</p></div>
+       <div style={{marginTop:-20,marginLeft:30 }}> <p className={styles.subheading}>{info.basicInfo?.detail?.address}</p></div>
          
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>
 

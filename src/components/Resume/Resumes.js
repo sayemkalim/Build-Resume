@@ -49,7 +49,7 @@ const Resumes = forwardRef((props, ref) => {
           info.workExp?.sectionTitle ? "" : styles.hidden
         }`}
       >
-        <div className={styles.sectionTitle}>{info.workExp.sectionTitle}</div>
+        <div className={styles.sectionTitle}Two>{info.workExp.sectionTitle}</div>
         <div className={styles.content}>
           {info.workExp?.details?.map((item) => (
             <div className={styles.item} key={item.title}>

@@ -133,9 +133,10 @@ const Body = () => {
       </div>
       <div className={styles.main}>
 
-        <Button onClick={onClick}><img src={image} width='250' height='250' /> </Button>
         <Button 
-        style={{marginTop:-290,marginLeft:900}}onClick={onClickTwo}><img src={image} width='250' height='250' /> </Button>
+        style={{marginLeft:-535}}onClick={onClick}><img src={image} width='250' height='250' /> </Button>
+        <Button 
+        style={{marginTop:-290,marginLeft:750}}onClick={onClickTwo}><img src={image} width='250' height='250' /> </Button>
         {/* <Button onClick={onClickThree}><img src={image} width='250' height='250' /> </Button> */}
 
         {showResults === 1 ? <Editor
@@ -163,7 +164,7 @@ const Body = () => {
           activeColor={activeColor}
         /> : null}
 
-        {showResultsThree === 1 ? <Editor
+        {/* {showResultsThree === 1 ? <Editor
           sections={sections}
           information={resumeInformation}
           setInformation={setResumeInformation}
@@ -173,7 +174,7 @@ const Body = () => {
           sections={sections}
           information={resumeInformation}
           activeColor={activeColor}
-        /> : null}
+        /> : null} */}
 
 
 

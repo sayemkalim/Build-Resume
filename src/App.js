@@ -8,6 +8,7 @@ import Home from './components/Home';
 
 const App = () => {
   const [user] = useAuthState(auth)
+  console.log('user',user);
   return (
     <>
     {

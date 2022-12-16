@@ -8,6 +8,7 @@ import Resumes from "../Resume/Resumes";
 import { Button } from "@mui/material";
 import ImageButton from 'react-image-button';
 import image from './t1.png'
+import Header from "../Header";
 
 
 
@@ -104,6 +105,8 @@ const Body = () => {
 
 
   return (
+    <>
+    {/* <Header/> */}
     <div className={styles.container}>
       <p className={styles.heading}>Resume Builder</p>
       <div className={styles.toolbar}>
@@ -182,6 +185,7 @@ const Body = () => {
 
       </div>
     </div>
+    </>
   );
 }
 
